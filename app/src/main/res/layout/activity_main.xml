@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2e2e2e"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btnSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:layout_margin="10dp"
+        android:src="@drawable/btn_switch_on" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333"
+        android:textColor="#ddd"
+        android:layout_margin="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="@string/zamanlayici"/>
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#444"
+        android:max="60"
+        android:min="1"
+        android:maxHeight="20dp"
+        android:minHeight="20dp"
+
+        />
+<TextView
+    android:id="@+id/seekDurum"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#333"
+    android:textColor="#ddd"
+    android:layout_margin="5dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:textSize="20sp"
+    android:text="1 dk"/>
+
+<TextView
+    android:id="@+id/baslat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#087305"
+    android:textColor="#ddd"
+    android:layout_margin="5dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:textSize="20sp"
+    android:text="@string/baslat"/>
+
+<TextView
+    android:id="@+id/durdur"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#a70a0c"
+    android:textColor="#ddd"
+    android:layout_margin="5dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:textSize="20sp"
+    android:visibility="gone"
+    android:text="@string/durdur"/>
+</LinearLayout>
