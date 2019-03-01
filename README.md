@@ -1,2 +1,2 @@
-# aLight
-aLight Flashlight Android app
+# ALIght
+ALIght Flashlight Android app
