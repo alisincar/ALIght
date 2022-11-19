@@ -27,7 +27,7 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
     private Camera camera;
     private boolean isFlashOn,hasFlash;
     private Parameters params;
-    private int CAMERA_IZIN = 0;
+    private int CAMERA_PERMISSION = 0;
     private TextView seekDurum, baslat, durdur;
     private int SEEK_DURUM;
     private SeekBar seekBar;
@@ -116,7 +116,7 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
     private void getCamera() {
         if (camera == null) {
 
-            if (CAMERA_IZIN == 0) {
+            if (CAMERA_PERMISSION == 0) {
                 IzinKontroEt();
             } else {
                 try {
@@ -257,7 +257,7 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
                 //-- Eğer almak istediğimiz izinler daha önceden kullanıcı tarafından onaylanmış ise bu kısımda istediğimiz işlemleri yapabiliriz..
                 //-- Mesela uygulama açılışında SD Kart üzerindeki herhangi bir dosyaya bu kısımda erişebiliriz.
-                CAMERA_IZIN = 1;
+                CAMERA_PERMISSION = 1;
             } else {
                 //-- Almak istediğimiz izinler daha öncesinde kullanıcı tarafından onaylanmamış ise bu kod bloğu harekete geçecektir.
                 //-- Burada requestPermissions() metodu ile kullanıcıdan ilgili Manifest izinlerini onaylamasını istiyoruz.
@@ -277,7 +277,7 @@ public class MainActivity extends Activity implements SeekBar.OnSeekBarChangeLis
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     //-- Eğer kullanıcı istemiş olduğunuz izni onaylarsa bu kod bloğu çalışacaktır.
-                    CAMERA_IZIN = 1;
+                    CAMERA_PERMISSION = 1;
                     getCamera();
                     Toast.makeText(MainActivity.this, "Kameraya izin verdiniz uygulama ayarlarından istediğiniz zaman izni kaldırabilirsiniz.", Toast.LENGTH_LONG).show();
                 } else {
